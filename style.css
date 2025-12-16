@@ -1,0 +1,1159 @@
+/* ============================================
+   CSS VARIABLES & GLOBAL SETTINGS
+   ============================================ */
+:root {
+    --accent-color: #E0FBAB;
+    --dark-bg: #222222;
+    --main-bg-color: #262c26;
+    --section-bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
+    --border-color: #333333;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Raleway', Arial, sans-serif;
+    background-image: url('1.png'); 
+    background-size: cover;        
+    background-position: center;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+.main-header {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; 
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    font-size: 1.2em;
+    transition: color var(--transition-speed);
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* ============================================
+   HERO SECTION (HOME PAGE)
+   ============================================ */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-border { 
+    border: 3px solid var(--text-color);
+    width: 90%; 
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 5em;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.cta-button {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 15px 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: inline-block;
+    transition: all var(--transition-speed);
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    border-color: var(--accent-color);
+}
+
+/* ============================================
+   THE BAND SECTION
+   ============================================ */
+.band-section {
+    background-color: var(--main-bg-color);
+    padding: 120px 40px 80px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.band-image-placeholder img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.band-text-intro {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.band-section h2 {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.bio-text {
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-size: 1.1em;
+}
+
+/* Band Members Grid */
+.band-members {
+    display: flex;
+    justify-content: space-around; 
+    gap: 30px; 
+    margin-top: 50px; 
+    padding: 0 40px;
+    flex-wrap: wrap;
+}
+
+.member-card {
+    flex-basis: 25%;
+    min-width: 200px;
+    padding: 15px;
+    text-align: center;
+}
+
+.member-card .member-name {
+    font-size: 1.5em; 
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.member-card .member-role {
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.member-card .bio-text {
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-size: 1em;
+    text-align: justify;
+}
+
+/* ============================================
+   LISTEN SECTION
+   ============================================ */
+.listen-section {
+    background-color: var(--main-bg-color);
+    padding: 120px 40px 80px;
+    color: var(--text-color);
+}
+
+.featured-album {
+    padding-top: 120px;
+}
+
+.listen-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.listen-info {
+    position: relative;
+    width: 40%;
+    text-align: left;
+}
+
+.listen-info h1 {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.plus-icon.top-left {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--accent-color);
+}
+
+.listen-text p {
+    font-size: 1em;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.listen-cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.listen-cta-buttons .buy-btn,
+.listen-cta-buttons .share-btn {
+    padding: 12px 25px;
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all var(--transition-speed);
+    text-transform: uppercase;
+    font-size: 0.9em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.listen-cta-buttons .buy-btn a,
+.listen-cta-buttons .share-btn a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.listen-cta-buttons .buy-btn:hover,
+.listen-cta-buttons .share-btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.listen-cta-buttons .buy-btn:hover a,
+.listen-cta-buttons .share-btn:hover a {
+    color: var(--dark-bg);
+}
+
+/* Music Player */
+.music-player-area {
+    width: 55%;
+    text-align: center;
+}
+
+.album-art-placeholder {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 30px;
+    background-color: #121212;
+}
+
+.album-cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tracklist {
+    background-color: var(--dark-bg);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.track-header-player p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.track-artist {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.audio-player-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.player-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.player-icons .icon {
+    font-size: 1.3em;
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.player-icons .icon:hover {
+    transform: scale(1.2);
+}
+
+.progress-bar-placeholder {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #444;
+    border-radius: 3px;
+    position: relative;
+}
+
+.time-volume {
+    color: var(--text-muted);
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.volume-icon {
+    color: var(--accent-color);
+}
+
+.track-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 20px 0;
+}
+
+.tracks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tracks li {
+    padding: 12px 0;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tracks li:last-child {
+    border-bottom: none;
+}
+
+.tracks li:hover {
+    color: var(--text-color);
+}
+
+.track-number {
+    color: var(--text-muted);
+    margin-right: 15px;
+}
+
+.track-title {
+    flex: 1;
+    color: var(--text-secondary);
+}
+
+.track-duration {
+    color: var(--text-muted);
+}
+
+/* Other Albums Section */
+.other-albums {
+    margin-top: 80px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.album-grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.album-card {
+    background-color: var(--section-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform var(--transition-speed);
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+}
+
+.album-art-container {
+    margin-bottom: 20px;
+}
+
+.album-cover-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.album-details h3 {
+    color: var(--accent-color);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.album-details p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tracklist-mini {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.tracklist-mini li {
+    color: var(--text-secondary);
+    padding: 8px 0;
+    font-size: 0.9em;
+}
+
+.listen-link {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all var(--transition-speed);
+}
+
+.listen-link:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+/* ============================================
+   MERCHANDISE SECTION
+   ============================================ */
+.header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 25px;
+    color: var(--text-color);
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    font-size: 2em;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 120px 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    transition: transform var(--transition-speed);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.product-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-name {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333;
+}
+
+.product-desc {
+    margin: 10px 0;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.product-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #1db954;
+    margin: 10px 0 20px 0;
+}
+
+.buy-btn {
+    padding: 12px 25px;
+    background-color: #1db954;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color var(--transition-speed);
+}
+
+.buy-btn:hover {
+    background-color: #17a548;
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+.contact-section {
+    padding: 120px 40px 80px;
+    background-color: var(--main-bg-color);
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.contact-intro h1 {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.contact-intro p {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form-wrapper h2 {
+    font-size: 2em;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 1em;
+    font-family: 'Raleway', Arial, sans-serif;
+    border-radius: 5px;
+    transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    padding: 15px 40px;
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all var(--transition-speed);
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #d0eb9b;
+    transform: translateY(-2px);
+}
+
+.contact-info-wrapper h2 {
+    font-size: 2em;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.info-item i {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    width: 30px;
+}
+
+.info-item h4 {
+    margin: 0 0 5px 0;
+    color: var(--text-color);
+    font-size: 1.1em;
+}
+
+.info-item p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.info-item a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.info-item a:hover {
+    color: var(--accent-color);
+}
+
+.social-media-contact {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.social-media-contact h3 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 1.3em;
+    transition: all var(--transition-speed);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    transform: translateY(-5px);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.main-footer {
+    background-color: var(--main-bg-color);
+    padding: 40px 20px 20px;
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.booking-area {
+    text-align: right;
+}
+
+.booking-area h4 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.booking-area p {
+    margin: 8px 0;
+    color: var(--text-secondary);
+}
+
+.booking-area a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.booking-area a:hover {
+    color: var(--accent-color);
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.footer,
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.9em;
+    color: var(--text-muted);
+}
+
+footer {
+    margin-top: auto;
+    background-color: #000000;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   PAYMENT PAGE
+   ============================================ */
+.payment-section {
+    padding: 120px 40px 80px;
+    background-color: var(--main-bg-color);
+    min-height: 100vh;
+}
+
+.payment-header {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1em;
+    margin-bottom: 20px;
+    transition: color var(--transition-speed);
+}
+
+.back-link:hover {
+    color: var(--accent-color);
+}
+
+.payment-header h1 {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-top: 10px;
+}
+
+.payment-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.payment-form-container {
+    background-color: var(--section-bg-color);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h2 {
+    color: var(--accent-color);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.item-price {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.total-price {
+    color: var(--accent-color);
+    font-size: 1.3em;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.saved-address-check,
+.save-address-check {
+    margin: 20px 0;
+}
+
+.saved-address-check label,
+.save-address-check label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.saved-address {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.saved-address p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.change-address-btn {
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all var(--transition-speed);
+}
+
+.change-address-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.payment-option {
+    cursor: pointer;
+}
+
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.payment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: all var(--transition-speed);
+    text-align: center;
+}
+
+.payment-card i {
+    font-size: 2em;
+    color: var(--accent-color);
+}
+
+.payment-card span {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.payment-option input[type="radio"]:checked + .payment-card,
+.payment-card.active {
+    border-color: var(--accent-color);
+    background-color: rgba(224, 251, 171, 0.1);
+}
+
+.payment-card:hover {
+    border-color: var(--accent-color);
+}
+
+.submit-payment-btn {
+    width: 100%;
+    padding: 18px;
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.submit-payment-btn:hover {
+    background-color: #d0eb9b;
+    transform: translateY(-2px);
+}
+
+.submit-payment-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.order-summary-sidebar {
+    background-color: var(--section-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+}
+
+.order-summary-sidebar h3 {
+    color: var(--accent-color);
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    color: var(--text-secondary);
+}
+
+.summary-divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 20px 0;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.summary-total span:last-child {
+    color: var(--accent-color);
+}
+
+.security-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: rgba(29, 185, 84, 0.1);
+    border-radius: 5px;
+    color: #1db954;
+}
+
+.security-badge i {
+    font-size: 1.2em;
+}
+
+/* ============================================
+   FLOATING ADMIN BUTTON
+   ============================================ */
+.floating-admin-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+}
